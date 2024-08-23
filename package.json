@@ -1,0 +1,26 @@
+{
+  "name": "coverlettergenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:client": "cd client && npm run build && npm run dev",
+    "start:api": "cd api && npm start",
+    "start": "concurrently \"npm run start:client\" \"npm run start:api\""
+  
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtificiallyInteresting/CoverLetterGenerator.git"
+  },
+  "author": "Henry Smith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArtificiallyInteresting/CoverLetterGenerator/issues"
+  },
+  "homepage": "https://github.com/ArtificiallyInteresting/CoverLetterGenerator#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
