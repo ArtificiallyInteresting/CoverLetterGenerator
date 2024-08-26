@@ -6,9 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:client": "cd client && npm run build && npm run dev",
-    "start:api": "cd api && npm start",
+    "start:api": "cd api && npm run build && npm start",
     "start": "concurrently \"npm run start:client\" \"npm run start:api\""
-  
   },
   "repository": {
     "type": "git",
@@ -21,6 +20,11 @@
   },
   "homepage": "https://github.com/ArtificiallyInteresting/CoverLetterGenerator#readme",
   "devDependencies": {
+    "@types/node": "^22.5.0",
     "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "axios": "^1.7.5"
   }
 }
