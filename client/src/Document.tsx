@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './Document.css'; // Make sure to create this CSS file
+import './Document.css'; 
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -20,7 +20,7 @@ const Document: React.FC = () => {
 
   return (
     <div className="document-container">
-      <h2>Job Description Analyzer</h2>
+      <h2>Cover Letter Generator</h2>
       <div className="input-section">
         <label htmlFor="document-textarea">Paste the responsibilities and qualifications from the job description below:</label>
         <textarea
@@ -31,9 +31,9 @@ const Document: React.FC = () => {
           rows={10}
         />
       </div>
-      <button onClick={handleUpload} className="upload-button">Analyze</button>
+      <button onClick={handleUpload} className="upload-button">Generate</button>
       <div className="response-section">
-        <h3>Analysis Result:</h3>
+        <h3>Cover Letter:</h3>
         <textarea
           value={response}
           readOnly
