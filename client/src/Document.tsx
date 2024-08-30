@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Document.css'; // Make sure to create this CSS file
 
 const API_URL = import.meta.env.VITE_API_URL;
-
-
 
 const Document: React.FC = () => {
   const [document, setDocument] = useState('');
@@ -20,24 +19,28 @@ const Document: React.FC = () => {
   };
 
   return (
-    <div>
-      <textarea
-        value={document}
-        onChange={(e) => setDocument(e.target.value)}
-        placeholder="Enter your document here"
-        rows={10}
-        cols={50}
-      />
-      <br />
-      <button onClick={handleUpload}>Upload</button>
-      <br />
-      <textarea
-        value={response}
-        readOnly
-        placeholder="Response will appear here"
-        rows={10}
-        cols={50}
-      />
+    <div className="document-container">
+      <h2>Job Description Analyzer</h2>
+      <div className="input-section">
+        <label htmlFor="document-textarea">Paste the responsibilities and qualifications from the job description below:</label>
+        <textarea
+          id="document-textarea"
+          value={document}
+          onChange={(e) => setDocument(e.target.value)}
+          placeholder="Enter your job description here"
+          rows={10}
+        />
+      </div>
+      <button onClick={handleUpload} className="upload-button">Analyze</button>
+      <div className="response-section">
+        <h3>Analysis Result:</h3>
+        <textarea
+          value={response}
+          readOnly
+          placeholder="Cover letter will appear here"
+          rows={10}
+        />
+      </div>
     </div>
   );
 };

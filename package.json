@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/ArtificiallyInteresting/CoverLetterGenerator#readme",
   "devDependencies": {
+    "@types/dotenv": "^8.2.0",
     "@types/node": "^22.5.0",
     "concurrently": "^8.2.2"
   },
