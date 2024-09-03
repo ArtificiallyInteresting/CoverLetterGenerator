@@ -25,7 +25,8 @@
   "devDependencies": {
     "@types/dotenv": "^8.2.0",
     "@types/node": "^22.5.0",
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "typescript": "^5.5.4"
   },
   "dependencies": {
     "@types/axios": "^0.14.0",
