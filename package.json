@@ -7,7 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:client": "cd client && npm run build && npm run dev",
     "start:api": "cd api && npm run build && npm start",
-    "start": "concurrently \"npm run start:client\" \"npm run start:api\""
+    "start": "concurrently \"npm run start:client\" \"npm run start:api\"",
+    "build:client": "cd client && npm run build",
+    "build:api": "cd api && npm run build",
+    "build": "npm run build:client && npm run build:api"
   },
   "repository": {
     "type": "git",
@@ -26,6 +29,7 @@
   },
   "dependencies": {
     "@types/axios": "^0.14.0",
-    "axios": "^1.7.5"
+    "axios": "^1.7.5",
+    "serverless-http": "^3.2.0"
   }
 }
