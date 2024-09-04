@@ -10,7 +10,7 @@ const Document: React.FC = () => {
 
   const handleUpload = async () => {
     try {
-      const result = await axios.post(`${API_URL}/api/upload`, { "text": document });
+      const result = await axios.post(`${API_URL}/getCoverLetter`, { "text": document });
       setResponse(result.data.result);
     } catch (error) {
       console.error('Error uploading document:', error);
