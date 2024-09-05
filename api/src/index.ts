@@ -17,7 +17,7 @@ const port = 3000;
 //   allowedHeaders: ['Content-Type', 'Authorization']
 // }));
 
-app.use(cors())
+app.use(cors({origin: '*'}))
 
 app.use(express.json()); // Add this line to parse JSON request bodies
 app.use(morgan('dev')); // Add this line for logging
