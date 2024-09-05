@@ -18,7 +18,7 @@ const port = 3000;
 //   methods: ['GET', 'POST'],
 //   allowedHeaders: ['Content-Type', 'Authorization']
 // }));
-app.use((0, cors_1.default)());
+app.use((0, cors_1.default)({ origin: '*' }));
 app.use(express_1.default.json()); // Add this line to parse JSON request bodies
 app.use((0, morgan_1.default)('dev')); // Add this line for logging
 app.use((0, morgan_1.default)(':method :url :status :res[content-length] - :response-time ms'));
